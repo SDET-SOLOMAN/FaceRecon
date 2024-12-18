@@ -1,7 +1,18 @@
 import threading
+#  it allows a separate thread to handle frame processing
+# while the main thread deals with video capture and display
+
 import cv2
+# OpenCV, a library for computer vision tasks,
+# is used here for capturing video from a webcam, processing it, and displaying results
+
 from deepface import DeepFace
+# DeepFace is a facial recognition library.
+# It's used here to compare a frame from the webcam with a reference image to determine if they match
+
 from queue import Queue
+# A queue is used to store frames temporarily before processing.
+# This ensures the program doesn't process frames faster than it captures them, which could overwhelm the system.
 
 # Initialize video capture
 cap = cv2.VideoCapture(1)  # Use the second camera (change index if needed)
