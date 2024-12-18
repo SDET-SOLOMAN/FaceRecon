@@ -1,0 +1,12 @@
+# Ignore all image files
+*.jpg
+*.jpeg
+*.png
+*.gif
+
+# Ignore DeepFace model weights
+/.deepface/weights/
+
+# Ignore other local files
+*.log
+*.tmp
